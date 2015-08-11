@@ -12,4 +12,10 @@ class Places
   define_singleton_method(:all) do
     @@all_locations
   end
+
+  define_method(:save) do
+    @@all_locations.push(self)
+  end
+
+  
 end

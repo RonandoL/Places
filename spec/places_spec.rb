@@ -13,6 +13,13 @@ describe('Places') do  # create class
     it('creates empty array to store locations') do
       expect(Places.all()).to(eq([]))
     end
+  end
 
+  describe('#save') do
+    it('save inputted location into array') do
+      new_place = Places.new('Seattle, Washington')
+      new_place.save()
+      expect(Places.all()).to(eq([new_place])) # grabs the array, saves obj to array
+    end
   end
 end
