@@ -8,7 +8,7 @@ get('/') do
   erb(:index)
 end
 
-get('/results') do
+post('/results') do
   locate = params.fetch('our_place')
   place = Places.new(locate)
   place.save()
