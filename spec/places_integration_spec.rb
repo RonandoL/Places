@@ -6,8 +6,8 @@ set(:show_exceptions, false)
 describe('locations we have been to path', {:type => :feature}) do
   it('accepts inputted location and saves to array') do
     visit('/')
-    fill_in("location", :with => "Paris")
+    fill_in("our_place", :with => "Paris")
     click_button("Go baby!")
-    expect(page).to have_content("newly added place is: Paris")
+    expect(page).to have_content("Paris")
   end
 end
