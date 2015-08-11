@@ -1,8 +1,8 @@
 <h2>Where have you been in the world??</h2>
 
   <ul>
-    <%  %>
-      <li></li>
+    <% @print_location.each() do |locale| %>
+      <li><%= locale.location()  %></li>
     <% end %>
   </ul>
 
